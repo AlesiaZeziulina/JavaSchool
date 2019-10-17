@@ -18,7 +18,7 @@ public class Calculator {
     private static int getInt() {
         Scanner input = new Scanner(System.in);
         while (!input.hasNextInt()) {
-            System.out.println("Not a number! Please input any positive number: ");
+            System.out.println("Not a number! Please input any number: ");
             input.next();
         }
         int num = input.nextInt();
@@ -27,13 +27,7 @@ public class Calculator {
 
     private static char getOperation(){
         char operation;
-        if(scanner.hasNext()){
-            operation = scanner.next().charAt(0);
-        } else {
-            System.out.println("Incorrect inpuuiuiut. Please enter +, -, * or /:");
-            scanner.next();
-            operation = getOperation();
-        }
+        operation = scanner.next().charAt(0);
         return operation;
     }
 
